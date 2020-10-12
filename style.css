@@ -1,0 +1,267 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Main CSS */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  background-color: darkblue;
+}
+
+.calc-container {
+  display: flex;
+  flex-direction: column;
+
+  width: 900px;
+  height: 100%;
+
+  position: relative;
+  text-align: center;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.display-div, #display-area {
+  width: 925px;
+  height: 100px;
+  font-size: 75px;
+  text-align: end;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  outline: none;
+  resize: none;
+  overflow: none;
+  box-shadow: 0 0 20px rgba(0,0,0,0.9);
+}
+
+.buttons {
+  width: 900px;
+  height: 700px;
+  position: relative;
+  top: 35px;
+  display: grid;
+  grid-template-columns: repeat(11, 75px);
+  grid-template-rows: repeat(4, 135px) 170px;
+  grid-template-areas: 
+    "equate seven eight nine divide ."
+    "equate . four five six mult"
+    "equate one two three subtract ."
+    "equate . clear zero decimal add";
+  gap: 5px 5px;
+
+  justify-items: center;
+  align-items: center;
+}
+
+#seven {
+  grid-area: seven;
+  grid-column: 3/4;
+}
+
+#eight {
+  grid-area: eight;
+  grid-column: 5/6;
+}
+
+#nine {
+  grid-area: nine;
+  grid-column: 7/8;
+}
+
+#divide {
+  grid-area: divide;
+  grid-column: 10/11;
+}
+
+#four {
+  grid-area: four;
+  grid-column: 4/5;
+}
+
+#five {
+  grid-area: five;
+  grid-column: 6/7;
+}
+
+#six {
+  grid-area: six;
+  grid-column: 8/9;
+}
+
+#mult {
+  grid-area: mult;
+  grid-column: 11/12;
+}
+
+#one {
+  grid-area: one;
+  grid-column: 3/4;
+}
+
+#two {
+  grid-area: two;
+  grid-column: 5/6;
+}
+
+#three {
+  grid-area: three;
+  grid-column: 7/8;
+}
+
+#subtract {
+  grid-area: subtract;
+  grid-column: 10/11;
+}
+
+#clear {
+  grid-area: clear;
+  grid-column: 4/5;
+}
+
+#zero {
+  grid-area: zero;
+  grid-column: 6/7;
+}
+
+#decimal {
+  grid-area: decimal;
+  grid-column: 8/9;
+}
+
+#add {
+  grid-area: add;
+  grid-column: 11/12;
+}
+
+#equate {
+  grid-area: equate;
+}
+
+.hex-btn {
+  color: white;
+  font-size: 70px;
+  border: none;
+  position: relative;
+  width: 150px; 
+  height: 86.60px;
+  background-color: #5a2ce2;
+  margin: 43.30px 0;
+  box-shadow: 0 0 20px rgba(0,0,0,0.9);
+}
+
+.hex-btn:before,
+.hex-btn:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 106.07px;
+  height: 106.07px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 21.9670px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.9);
+}
+
+.hex-btn:before {
+  top: -53.0330px;
+}
+
+.hex-btn:after {
+  bottom: -53.0330px;
+}
+
+.hex-btn span {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width:150px;
+  height:86.6025px;
+  z-index: 2;
+  background: inherit;
+}
+
+.hex-btn:active {
+  transform: scale(0.95);
+}
+
+#divide-btn, #mult-btn, #subtract-btn, #add-btn {
+  background-color: darkgoldenrod;
+}
+
+.equal-btn {
+  width: 100px;
+  height: 600px;
+  background-color: #5a2ce2;
+  border: none;
+  color: white;
+  background-color: darkgoldenrod;
+  font-size: 70px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.9);
+}
+
+.equal-btn:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 900px) {
+  body {
+    transform: scale(75%);
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    transform: scale(50%);
+  }
+}
