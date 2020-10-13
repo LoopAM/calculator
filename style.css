@@ -229,6 +229,7 @@ body {
   height:86.6025px;
   z-index: 2;
   background: inherit;
+  pointer-events: none;
 }
 
 .hex-btn:active {
