@@ -52,6 +52,7 @@ table {
 
 body {
   background-color: darkblue;
+  transform: scale(0.95);
 }
 
 .calc-container {
